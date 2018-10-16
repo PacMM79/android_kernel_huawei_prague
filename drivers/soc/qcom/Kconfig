@@ -10,3 +10,5 @@ config QCOM_GSBI
           functions for connecting the underlying serial UART, SPI, and I2C
           devices to the output pins.
 
+config STATE_NOTIFIER
+    bool "State Notifier"
