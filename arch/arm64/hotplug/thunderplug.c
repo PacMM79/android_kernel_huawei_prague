@@ -38,7 +38,7 @@
 
 #define DEFAULT_CPU_LOAD_THRESHOLD	(90)
 
-#define HOTPLUG_ENABLED			(0)
+#define HOTPLUG_ENABLED			(1)
 #define STARTDELAY			1000
 
 #define DEF_SAMPLING_MS			(20)
@@ -90,7 +90,7 @@ static struct thunder_param_struct {
 	.suspend_cpu_num = 2,
 	.resume_cpu_num = (NR_CPUS -1),
 	.max_core_online = NR_CPUS,
-	.min_core_online = 1,
+	.min_core_online = 2,
 	.sampling_time = DEF_SAMPLING_MS,
 	.load_threshold = DEFAULT_CPU_LOAD_THRESHOLD,
 	.tplug_hp_enabled = HOTPLUG_ENABLED,
