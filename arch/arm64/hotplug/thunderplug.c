@@ -38,15 +38,15 @@
 
 #define DEFAULT_CPU_LOAD_THRESHOLD	(90)
 
-#define HOTPLUG_ENABLED			(1)
+#define HOTPLUG_ENABLED			(0)
 #define STARTDELAY			1000
 
 #define DEF_SAMPLING_MS			(20)
 #define MIN_SAMLING_MS			(10)
 #define MIN_CPU_UP_TIME			(300)
 
-#define DEFAULT_BOOST_LOCK_DUR		500 * 1000L
-#define DEFAULT_NR_CPUS_BOOSTED		2
+#define DEFAULT_BOOST_LOCK_DUR		1500 * 1000L
+#define DEFAULT_NR_CPUS_BOOSTED		4
 #define MIN_INPUT_INTERVAL		150 * 1000L
 
 static bool isSuspended = false;
@@ -90,7 +90,7 @@ static struct thunder_param_struct {
 	.suspend_cpu_num = 2,
 	.resume_cpu_num = (NR_CPUS -1),
 	.max_core_online = NR_CPUS,
-	.min_core_online = 2,
+	.min_core_online = 4,
 	.sampling_time = DEF_SAMPLING_MS,
 	.load_threshold = DEFAULT_CPU_LOAD_THRESHOLD,
 	.tplug_hp_enabled = HOTPLUG_ENABLED,
