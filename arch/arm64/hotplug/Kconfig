@@ -2,3 +2,27 @@ config THUNDERPLUG_CONTROL
 	bool "Enable plugging down/up of cores based on load per core"
 	help
 	  This driver hotplugs cpu cores based on per-core load
+
+ config BLU_PLUG
+ 	bool "Dynamic hotplug driver"
+ 	depends on HOTPLUG_CPU
+ 	default n
+ 	help
+      The Dynamic hotplug driver automatically online/offline CPUs proportional to system load. 
+           
+ config MSM_HOTPLUG
+ 	bool "MSM hotplug driver"
+ 	depends on HOTPLUG_CPU
+ 	default n
+ 	help
+	  The MSM hotplug driver controls on-/offlining of additional cores based
+	  on current cpu load.
+
+config AUTOSMP
+	bool "Multi-core automatic hotplug support"
+	depends on SMP && HOTPLUG_CPU
+	default n
+	help
+	  Automatically hotplugs the multiple cpu cores on and off
+	  based on cpu load and suspend state.
+
