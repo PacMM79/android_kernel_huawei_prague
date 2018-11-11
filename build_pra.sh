@@ -31,10 +31,10 @@ White='\e[0;37m'        # White
 nocol='\033[0m'         # Default
 
 # Standard GCC compiler
-export PATH=$PATH:$LOCAL_DIR/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+#export PATH=$PATH:$LOCAL_DIR/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 
 # UberTC compiler
-#export PATH=$PATH:$LOCAL_DIR/prebuilts/aarch64-linux-android-4.9/bin
+export PATH=$PATH:$LOCAL_DIR/prebuilts/aarch64-linux-android-4.9/bin
 
 # Prepare to compile
 export CROSS_COMPILE="aarch64-linux-android-"
